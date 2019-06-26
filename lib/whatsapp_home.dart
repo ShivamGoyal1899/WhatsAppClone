@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_whatsapp_clone/pages/camera_screen.dart';
-import 'package:flutter_whatsapp_clone/pages/chat_screen.dart';
-import 'package:flutter_whatsapp_clone/pages/status_screen.dart';
-import 'package:flutter_whatsapp_clone/pages/call_screen.dart';
+import 'package:LastChat/pages/camera_screen.dart';
+import 'package:LastChat/pages/chat_screen.dart';
+import 'package:LastChat/pages/status_screen.dart';
+import 'package:LastChat/pages/call_screen.dart';
 
 enum MoreMenu { new_group, new_broadcast, web, starred, payment, setting }
 
@@ -43,7 +43,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(
-          "WhatsApp",
+          "LastChat",
           style: new TextStyle(fontSize: 24.0),
         ),
         elevation: 0.8,
@@ -81,31 +81,31 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
           new PopupMenuButton<MoreMenu>(
             tooltip: "More options",
             itemBuilder: (BuildContext context) => <PopupMenuEntry<MoreMenu>>[
-              const PopupMenuItem<MoreMenu>(
-                value: MoreMenu.new_group,
-                child: Text('New group'),
-              ),
-              const PopupMenuItem<MoreMenu>(
-                value: MoreMenu.new_broadcast,
-                child: Text('New broadcast'),
-              ),
-              const PopupMenuItem<MoreMenu>(
-                value: MoreMenu.web,
-                child: Text('WhatsApp Web'),
-              ),
-              const PopupMenuItem<MoreMenu>(
-                value: MoreMenu.starred,
-                child: Text('Starred messages'),
-              ),
-              const PopupMenuItem<MoreMenu>(
-                value: MoreMenu.payment,
-                child: Text('Payments'),
-              ),
-              const PopupMenuItem<MoreMenu>(
-                value: MoreMenu.setting,
-                child: Text('Settings'),
-              ),
-            ],
+                  const PopupMenuItem<MoreMenu>(
+                    value: MoreMenu.new_group,
+                    child: Text('New group'),
+                  ),
+                  const PopupMenuItem<MoreMenu>(
+                    value: MoreMenu.new_broadcast,
+                    child: Text('New broadcast'),
+                  ),
+                  const PopupMenuItem<MoreMenu>(
+                    value: MoreMenu.web,
+                    child: Text('WhatsApp Web'),
+                  ),
+                  const PopupMenuItem<MoreMenu>(
+                    value: MoreMenu.starred,
+                    child: Text('Starred messages'),
+                  ),
+                  const PopupMenuItem<MoreMenu>(
+                    value: MoreMenu.payment,
+                    child: Text('Payments'),
+                  ),
+                  const PopupMenuItem<MoreMenu>(
+                    value: MoreMenu.setting,
+                    child: Text('Settings'),
+                  ),
+                ],
           ),
         ],
       ),

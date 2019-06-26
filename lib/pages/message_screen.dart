@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_whatsapp_clone/models/chat_model.dart';
+import 'package:LastChat/models/chat_model.dart';
 
 var list = ["one", "two", "three", "four"];
 
 enum MoreMenu { view_contact, media, search, mute, wallpaper, more }
 
 class MessageScreen extends StatefulWidget {
-  //var i;
-  //MessageScreen(this.i);
-
   @override
   _MessageScreenState createState() => _MessageScreenState();
 }
@@ -26,7 +23,7 @@ class _MessageScreenState extends State<MessageScreen> {
             new CircleAvatar(
               foregroundColor: Theme.of(context).primaryColor,
               backgroundColor: Colors.grey,
-              backgroundImage: new NetworkImage(dummyData[3].avatarUrl),
+              backgroundImage: new AssetImage(dummyData[3].avatarUrl),
               radius: 18.0,
             ),
             new Column(
@@ -106,8 +103,8 @@ class _MessageScreenState extends State<MessageScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: NetworkImage(
-                "https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"),
+            image: AssetImage(
+                "assets/images/bg.png"),
             fit: BoxFit.cover,
           ),
         ),
@@ -422,7 +419,7 @@ class _MessageScreenState extends State<MessageScreen> {
                         onPressed: () {},
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

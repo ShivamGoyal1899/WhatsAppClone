@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_whatsapp_clone/models/call_model.dart';
+import 'package:LastChat/models/call_model.dart';
 
 class CallScreen extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class _CallScreenState extends State<CallScreen> {
                 leading: new CircleAvatar(
                   foregroundColor: Theme.of(context).primaryColor,
                   backgroundColor: Colors.grey,
-                  backgroundImage: new NetworkImage(dummyData[i].avatarUrl),
+                  backgroundImage: new AssetImage(dummyData[i].avatarUrl),
                   radius: 27.0,
                 ),
                 title: new Row(
@@ -32,16 +32,14 @@ class _CallScreenState extends State<CallScreen> {
                 ),
                 subtitle: new Container(
                   padding: const EdgeInsets.only(top: 1.0),
-                  child:
-                  new Text(
+                  child: new Text(
                     dummyData[i].time,
                     style:
                         new TextStyle(color: Colors.grey[600], fontSize: 15.0),
                   ),
                 ),
-                trailing:
-                new Icon(
-                  Icons.call,
+                trailing: new Icon(
+                  i % 2 == 0 ? Icons.call : Icons.videocam,
                   color: Theme.of(context).primaryColor,
                 ),
               ),

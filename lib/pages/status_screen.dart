@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_whatsapp_clone/models/Status_model.dart';
+import 'package:LastChat/models/Status_model.dart';
 
 class StatusScreen extends StatefulWidget {
   @override
@@ -19,28 +19,27 @@ class _StatusScreenState extends State<StatusScreen> {
                     new CircleAvatar(
                       foregroundColor: Theme.of(context).primaryColor,
                       backgroundColor: Colors.grey,
-                      backgroundImage: new NetworkImage(dummyData[i].avatarUrl),
+                      backgroundImage: new AssetImage(dummyData[i].avatarUrl),
                       radius: 27.0,
                     ),
                     new Positioned(
-                      left: 34.0,
-                      top: 34.0,
-                      child: Container(
-                        width: 20.0,
-                        height: 20.0,
-                        child: new FloatingActionButton(
-                          mini: true,
-                          shape: StadiumBorder(),
-                          onPressed: null,
-                          backgroundColor: Theme.of(context).accentColor,
-                          child: new Icon(
-                            Icons.add,
-                            color: Colors.white,
-                            size: 18.0,
+                        left: 34.0,
+                        top: 34.0,
+                        child: Container(
+                          width: 20.0,
+                          height: 20.0,
+                          child: new FloatingActionButton(
+                            mini: true,
+                            shape: StadiumBorder(),
+                            onPressed: null,
+                            backgroundColor: Theme.of(context).accentColor,
+                            child: new Icon(
+                              Icons.add,
+                              color: Colors.white,
+                              size: 18.0,
+                            ),
                           ),
-                        ),
-                      )
-                    ),
+                        )),
                   ],
                 ),
                 title: new Row(
@@ -82,7 +81,7 @@ class _StatusScreenState extends State<StatusScreen> {
                 leading: new CircleAvatar(
                   foregroundColor: Theme.of(context).primaryColor,
                   backgroundColor: Colors.grey,
-                  backgroundImage: new NetworkImage(dummyData_1[i].avatarUrl),
+                  backgroundImage: new AssetImage(dummyData_1[i].avatarUrl),
                   radius: 27.0,
                 ),
                 title: new Row(
@@ -91,7 +90,9 @@ class _StatusScreenState extends State<StatusScreen> {
                     new Text(
                       dummyData_1[i].name,
                       style: new TextStyle(
-                          fontWeight: FontWeight.w600, fontSize: 17.0),
+                        fontWeight: FontWeight.w600,
+                        fontSize: 17.0,
+                      ),
                     ),
                   ],
                 ),
@@ -99,8 +100,10 @@ class _StatusScreenState extends State<StatusScreen> {
                   padding: const EdgeInsets.only(top: 1.0),
                   child: new Text(
                     dummyData_1[i].time,
-                    style:
-                        new TextStyle(color: Colors.grey[600], fontSize: 15.0),
+                    style: new TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: 15.0,
+                    ),
                   ),
                 ),
               ),

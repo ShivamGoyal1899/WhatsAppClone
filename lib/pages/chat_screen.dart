@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_whatsapp_clone/models/chat_model.dart';
-import 'package:flutter_whatsapp_clone/pages/message_screen.dart';
+import 'package:LastChat/models/chat_model.dart';
+import 'package:LastChat/pages/message_screen.dart';
 
 class ChatScreen extends StatefulWidget {
   @override
@@ -18,7 +18,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 leading: new CircleAvatar(
                   foregroundColor: Theme.of(context).primaryColor,
                   backgroundColor: Colors.grey,
-                  backgroundImage: new NetworkImage(dummyData[i].avatarUrl),
+                  backgroundImage: new AssetImage(dummyData[i].avatarUrl),
                   radius: 26.0,
                 ),
                 title: new Row(
