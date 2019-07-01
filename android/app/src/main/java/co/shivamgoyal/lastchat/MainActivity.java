@@ -1,4 +1,4 @@
-package tk.shivamgoyal.flutter_whatsapp_clone;
+package co.shivamgoyal.lastchat;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
