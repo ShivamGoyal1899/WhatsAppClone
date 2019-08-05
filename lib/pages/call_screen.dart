@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:LastChat/models/call_model.dart';
+import '../models/call_model.dart';
 
 class CallScreen extends StatefulWidget {
   @override

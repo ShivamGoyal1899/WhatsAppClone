@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:LastChat/models/chat_model.dart';
-import 'package:LastChat/pages/message_screen.dart';
+import '../models/chat_model.dart';
+import '../pages/message_screen.dart';
 
 class ChatScreen extends StatefulWidget {
   @override

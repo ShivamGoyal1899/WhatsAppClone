@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:LastChat/pages/camera_screen.dart';
-import 'package:LastChat/pages/chat_screen.dart';
-import 'package:LastChat/pages/status_screen.dart';
-import 'package:LastChat/pages/call_screen.dart';
+import 'pages/camera_screen.dart';
+import 'pages/chat_screen.dart';
+import 'pages/status_screen.dart';
+import 'pages/call_screen.dart';
 
 enum MoreMenu { new_group, new_broadcast, web, starred, payment, setting }
 
@@ -43,7 +43,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(
-          "LastChat",
+          "WhatsApp",
           style: new TextStyle(fontSize: 24.0),
         ),
         elevation: 0.8,

@@ -1,4 +1,4 @@
-package co.shivamgoyal.lastchat;
+package co.shivamgoyal.whatsapp;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

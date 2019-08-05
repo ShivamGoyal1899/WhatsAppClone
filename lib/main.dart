@@ -1,7 +1,6 @@
 import 'dart:async';
-
+import 'whatsapp_home.dart';
 import 'package:flutter/material.dart';
-import 'package:LastChat/whatsapp_home.dart';
 import 'package:camera/camera.dart';
 
 List<CameraDescription> cameras;
@@ -12,11 +11,10 @@ Future<Null> main() async{
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'LastChat',
+      title: 'WhatsApp',
       theme: ThemeData(
         primaryColor: new Color(0xff075E54),
         accentColor: new Color(0xff25D336),

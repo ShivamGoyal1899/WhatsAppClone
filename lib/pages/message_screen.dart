@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:LastChat/models/chat_model.dart';
+import '../models/chat_model.dart';
 
 var list = ["one", "two", "three", "four"];
 

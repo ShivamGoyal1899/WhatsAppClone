@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:LastChat/models/Status_model.dart';
+import '../models/Status_model.dart';
 
 class StatusScreen extends StatefulWidget {
   @override
