@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pages/SettingScreens/SettingMainScreen.dart';
 import 'pages/camera_screen.dart';
 import 'pages/chat_screen.dart';
 import 'pages/status_screen.dart';
@@ -36,6 +37,16 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
 
   void _handleTabIndex() {
     setState(() {});
+  }
+
+  void choiceActions(MoreMenu choice) {
+    if (choice == MoreMenu.setting) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => SettingMainScreen()), // MessageScreen(i)
+      );
+    }
   }
 
   @override
@@ -79,33 +90,34 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
             onPressed: () {},
           ),
           new PopupMenuButton<MoreMenu>(
+            onSelected: choiceActions,
             tooltip: "More options",
             itemBuilder: (BuildContext context) => <PopupMenuEntry<MoreMenu>>[
-                  const PopupMenuItem<MoreMenu>(
-                    value: MoreMenu.new_group,
-                    child: Text('New group'),
-                  ),
-                  const PopupMenuItem<MoreMenu>(
-                    value: MoreMenu.new_broadcast,
-                    child: Text('New broadcast'),
-                  ),
-                  const PopupMenuItem<MoreMenu>(
-                    value: MoreMenu.web,
-                    child: Text('WhatsApp Web'),
-                  ),
-                  const PopupMenuItem<MoreMenu>(
-                    value: MoreMenu.starred,
-                    child: Text('Starred messages'),
-                  ),
-                  const PopupMenuItem<MoreMenu>(
-                    value: MoreMenu.payment,
-                    child: Text('Payments'),
-                  ),
-                  const PopupMenuItem<MoreMenu>(
-                    value: MoreMenu.setting,
-                    child: Text('Settings'),
-                  ),
-                ],
+              const PopupMenuItem<MoreMenu>(
+                value: MoreMenu.new_group,
+                child: Text('New group'),
+              ),
+              const PopupMenuItem<MoreMenu>(
+                value: MoreMenu.new_broadcast,
+                child: Text('New broadcast'),
+              ),
+              const PopupMenuItem<MoreMenu>(
+                value: MoreMenu.web,
+                child: Text('WhatsApp Web'),
+              ),
+              const PopupMenuItem<MoreMenu>(
+                value: MoreMenu.starred,
+                child: Text('Starred messages'),
+              ),
+              const PopupMenuItem<MoreMenu>(
+                value: MoreMenu.payment,
+                child: Text('Payments'),
+              ),
+              const PopupMenuItem<MoreMenu>(
+                value: MoreMenu.setting,
+                child: Text('Settings'),
+              ),
+            ],
           ),
         ],
       ),
