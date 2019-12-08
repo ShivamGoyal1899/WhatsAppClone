@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../models/Status_model.dart';
-import 'stories_viewer.dart';
 
 class StatusScreen extends StatefulWidget {
   @override
@@ -106,12 +105,7 @@ class _StatusScreenState extends State<StatusScreen> {
                       fontSize: 15.0,
                     ),
                   ),
-
                 ),
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(
-                      builder: (context) => StoriesViewer()
-                    ))
               ),
             ],
           ),
