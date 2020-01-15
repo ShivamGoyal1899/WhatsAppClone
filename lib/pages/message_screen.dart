@@ -125,7 +125,7 @@ class _MessageScreenState extends State<MessageScreen> {
                    Flexible(
                     flex: 1,
                     child:  Container(
-                      raints: Boxraints(
+                      constraints: BoxConstraints(
                         maxWidth: MediaQuery.of(context).size.width * 0.8,
                       ),
                       padding: EdgeInsets.all(8.0),
@@ -163,7 +163,7 @@ class _MessageScreenState extends State<MessageScreen> {
                    Flexible(
                     flex: 1,
                     child:  Container(
-                      raints: Boxraints(
+                      constraints: BoxConstraints(
                         maxWidth: MediaQuery.of(context).size.width * 0.8,
                       ),
                       padding: EdgeInsets.all(8.0),
@@ -201,7 +201,7 @@ class _MessageScreenState extends State<MessageScreen> {
                    Flexible(
                     flex: 1,
                     child:  Container(
-                      raints: Boxraints(
+                      constraints: BoxConstraints(
                         maxWidth: MediaQuery.of(context).size.width * 0.8,
                       ),
                       padding: EdgeInsets.all(8.0),
@@ -239,7 +239,7 @@ class _MessageScreenState extends State<MessageScreen> {
                    Flexible(
                     flex: 1,
                     child:  Container(
-                      raints: Boxraints(
+                      constraints: BoxConstraints(
                         maxWidth: MediaQuery.of(context).size.width * 0.8,
                       ),
                       padding: EdgeInsets.all(8.0),
@@ -277,7 +277,7 @@ class _MessageScreenState extends State<MessageScreen> {
                    Flexible(
                     flex: 1,
                     child:  Container(
-                      raints: Boxraints(
+                      constraints: BoxConstraints(
                         maxWidth: MediaQuery.of(context).size.width * 0.8,
                       ),
                       padding: EdgeInsets.all(8.0),
@@ -315,7 +315,7 @@ class _MessageScreenState extends State<MessageScreen> {
                    Flexible(
                     flex: 1,
                     child:  Container(
-                      raints: Boxraints(
+                      constraints: BoxConstraints(
                         maxWidth: MediaQuery.of(context).size.width * 0.8,
                       ),
                       padding: EdgeInsets.all(8.0),
@@ -364,7 +364,7 @@ class _MessageScreenState extends State<MessageScreen> {
                           ),
                            Flexible(
                             child: Container(
-                              raints: Boxraints(maxHeight: 100.0),
+                              constraints: BoxConstraints(maxHeight: 100.0),
                               child:  TextField(
                                 style: TextStyle(
                                     color: Colors.black,

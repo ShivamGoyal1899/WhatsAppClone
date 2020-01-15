@@ -8,7 +8,7 @@ import 'pages/call_screen.dart';
 enum MoreMenu { _group, _broadcast, web, starred, payment, setting }
 
 class WhatsAppHome extends StatefulWidget {
-  var cameras;
+  final cameras;
 
   WhatsAppHome(this.cameras);
 

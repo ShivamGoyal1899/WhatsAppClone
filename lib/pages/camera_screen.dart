@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 
 class CameraScreen extends StatefulWidget {
-  List<CameraDescription> cameras;
+  final List<CameraDescription> cameras;
 
   CameraScreen(this.cameras);
 
