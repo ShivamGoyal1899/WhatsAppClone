@@ -7,52 +7,52 @@ class MessageModel {
 }
 
 List<MessageModel> messageData = [
-   MessageModel(
+  MessageModel(
     status: "sent",
     message: "Hey Dan! How you doing today?",
     time: "1:16 pm",
   ),
-   MessageModel(
+  MessageModel(
     status: "received",
     message: "Hey Dan! How you doing today?",
     time: "12:56 pm",
   ),
-   MessageModel(
+  MessageModel(
     status: "sent",
     message: "Hey Dan! How you doing today?",
     time: "11:07 am",
   ),
-   MessageModel(
+  MessageModel(
     status: "received",
     message: "Hey Dan! How you doing today?",
     time: "9:41 am",
   ),
-   MessageModel(
+  MessageModel(
     status: "sent",
     message: "Hey Dan! How you doing today?",
     time: "6:26 am",
   ),
-   MessageModel(
+  MessageModel(
     status: "sent",
     message: "Hey Dan! How you doing today?",
     time: "1:16 pm",
   ),
-   MessageModel(
+  MessageModel(
     status: "received",
     message: "Hey Dan! How you doing today?",
     time: "12:56 pm",
   ),
-   MessageModel(
+  MessageModel(
     status: "sent",
     message: "Hey Dan! How you doing today?",
     time: "11:07 am",
   ),
-   MessageModel(
+  MessageModel(
     status: "received",
     message: "Hey Dan! How you doing today?",
     time: "9:41 am",
   ),
-   MessageModel(
+  MessageModel(
     status: "sent",
     message: "Hey Dan! How you doing today?",
     time: "6:26 am",

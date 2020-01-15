@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
+import 'package:flutter/material.dart';
 
 class CameraScreen extends StatefulWidget {
   final List<CameraDescription> cameras;
@@ -8,7 +8,7 @@ class CameraScreen extends StatefulWidget {
 
   @override
   CameraScreenState createState() {
-    return  CameraScreenState();
+    return CameraScreenState();
   }
 }
 
@@ -18,7 +18,7 @@ class CameraScreenState extends State<CameraScreen> {
   @override
   void initState() {
     super.initState();
-    controller =  CameraController(widget.cameras[1], ResolutionPreset.high);
+    controller = CameraController(widget.cameras[1], ResolutionPreset.high);
     controller.initialize().then((_) {
       if (!mounted) {
         return;
@@ -36,11 +36,11 @@ class CameraScreenState extends State<CameraScreen> {
   @override
   Widget build(BuildContext context) {
     if (!controller.value.isInitialized) {
-      return  Container();
+      return Container();
     }
-    return  AspectRatio(
+    return AspectRatio(
       aspectRatio: controller.value.aspectRatio,
-      child:  CameraPreview(controller),
+      child: CameraPreview(controller),
     );
   }
 }

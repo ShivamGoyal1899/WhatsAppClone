@@ -7,7 +7,7 @@ class StatusModel {
 }
 
 List<StatusModel> dummyData = [
-   StatusModel(
+  StatusModel(
     name: "My status",
     time: "Tap to add status update",
     avatarUrl: "assets/images/1.jpg",
@@ -15,7 +15,7 @@ List<StatusModel> dummyData = [
 ];
 
 List<StatusModel> dummyData_1 = [
-   StatusModel(
+  StatusModel(
     name: "Timo Stern",
     time: "Yesterday, 10:32 pm",
     avatarUrl: "assets/images/4.jpg",
