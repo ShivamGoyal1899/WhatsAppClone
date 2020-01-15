@@ -10,38 +10,38 @@ class ChatScreen extends StatefulWidget {
 class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
-    return new ListView.builder(
+    return  ListView.builder(
       itemCount: dummyData.length,
-      itemBuilder: (context, i) => new Column(
+      itemBuilder: (context, i) =>  Column(
             children: <Widget>[
-              new ListTile(
-                leading: new CircleAvatar(
+               ListTile(
+                leading:  CircleAvatar(
                   foregroundColor: Theme.of(context).primaryColor,
                   backgroundColor: Colors.grey,
-                  backgroundImage: new AssetImage(dummyData[i].avatarUrl),
+                  backgroundImage:  AssetImage(dummyData[i].avatarUrl),
                   radius: 26.0,
                 ),
-                title: new Row(
+                title:  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    new Text(
+                     Text(
                       dummyData[i].name,
-                      style: new TextStyle(
+                      style:  TextStyle(
                           fontWeight: FontWeight.w600, fontSize: 17.0),
                     ),
-                    new Text(
+                     Text(
                       dummyData[i].time,
-                      style: new TextStyle(
+                      style:  TextStyle(
                           color: Colors.grey[600], fontSize: 13.0),
                     ),
                   ],
                 ),
-                subtitle: new Container(
-                  padding: const EdgeInsets.only(top: 5.0),
-                  child: new Text(
+                subtitle:  Container(
+                  padding:  EdgeInsets.only(top: 5.0),
+                  child:  Text(
                     dummyData[i].message,
                     style:
-                        new TextStyle(color: Colors.grey[600], fontSize: 15.0),
+                         TextStyle(color: Colors.grey[600], fontSize: 15.0),
                   ),
                 ),
                 onTap: () {
@@ -54,8 +54,8 @@ class _ChatScreenState extends State<ChatScreen> {
                 },
               ),
               Container(
-                padding: const EdgeInsets.only(right: 10.0),
-                child: new Divider(
+                padding:  EdgeInsets.only(right: 10.0),
+                child:  Divider(
                   height: 8.0,
                   indent: 83.0,
                 ),

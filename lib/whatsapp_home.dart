@@ -5,7 +5,7 @@ import 'pages/chat_screen.dart';
 import 'pages/status_screen.dart';
 import 'pages/call_screen.dart';
 
-enum MoreMenu { new_group, new_broadcast, web, starred, payment, setting }
+enum MoreMenu { _group, _broadcast, web, starred, payment, setting }
 
 class WhatsAppHome extends StatefulWidget {
   var cameras;
@@ -24,7 +24,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
   void initState() {
     // TODO: implement initState
     super.initState();
-    _tabController = new TabController(vsync: this, initialIndex: 1, length: 4);
+    _tabController =  TabController(vsync: this, initialIndex: 1, length: 4);
     _tabController.addListener(_handleTabIndex);
   }
 
@@ -51,69 +51,69 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(
+    return  Scaffold(
+      appBar:  AppBar(
+        title:  Text(
           "WhatsApp",
-          style: new TextStyle(fontSize: 24.0),
+          style:  TextStyle(fontSize: 24.0),
         ),
         elevation: 0.8,
-        bottom: new TabBar(
+        bottom:  TabBar(
           isScrollable: true,
           controller: _tabController,
           indicatorColor: Colors.white,
           tabs: <Widget>[
             Container(
               width: MediaQuery.of(context).size.width / 15,
-              child: new Tab(
-                icon: new Icon(Icons.camera_alt),
+              child:  Tab(
+                icon:  Icon(Icons.camera_alt),
               ),
             ),
-            new Container(
+             Container(
                 width: MediaQuery.of(context).size.width / 5,
-                child: new Tab(text: "CHATS")),
-            new Container(
+                child:  Tab(text: "CHATS")),
+             Container(
                 width: MediaQuery.of(context).size.width / 5,
-                child: new Tab(text: "STATUS")),
-            new Container(
+                child:  Tab(text: "STATUS")),
+             Container(
                 width: MediaQuery.of(context).size.width / 5,
-                child: new Tab(text: "CALLS")),
+                child:  Tab(text: "CALLS")),
           ],
         ),
         actions: <Widget>[
-          new IconButton(
-            icon: new Icon(
+           IconButton(
+            icon:  Icon(
               Icons.search,
               color: Colors.white,
             ),
             tooltip: "Search",
             onPressed: () {},
           ),
-          new PopupMenuButton<MoreMenu>(
+           PopupMenuButton<MoreMenu>(
             onSelected: choiceActions,
             tooltip: "More options",
             itemBuilder: (BuildContext context) => <PopupMenuEntry<MoreMenu>>[
-              const PopupMenuItem<MoreMenu>(
-                value: MoreMenu.new_group,
-                child: Text('New group'),
+               PopupMenuItem<MoreMenu>(
+                value: MoreMenu._group,
+                child: Text(' group'),
               ),
-              const PopupMenuItem<MoreMenu>(
-                value: MoreMenu.new_broadcast,
-                child: Text('New broadcast'),
+               PopupMenuItem<MoreMenu>(
+                value: MoreMenu._broadcast,
+                child: Text(' broadcast'),
               ),
-              const PopupMenuItem<MoreMenu>(
+               PopupMenuItem<MoreMenu>(
                 value: MoreMenu.web,
                 child: Text('WhatsApp Web'),
               ),
-              const PopupMenuItem<MoreMenu>(
+               PopupMenuItem<MoreMenu>(
                 value: MoreMenu.starred,
                 child: Text('Starred messages'),
               ),
-              const PopupMenuItem<MoreMenu>(
+               PopupMenuItem<MoreMenu>(
                 value: MoreMenu.payment,
                 child: Text('Payments'),
               ),
-              const PopupMenuItem<MoreMenu>(
+               PopupMenuItem<MoreMenu>(
                 value: MoreMenu.setting,
                 child: Text('Settings'),
               ),
@@ -121,13 +121,13 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
           ),
         ],
       ),
-      body: new TabBarView(
+      body:  TabBarView(
         controller: _tabController,
         children: <Widget>[
-          new CameraScreen(widget.cameras),
-          new ChatScreen(),
-          new StatusScreen(),
-          new CallScreen(),
+           CameraScreen(widget.cameras),
+           ChatScreen(),
+           StatusScreen(),
+           CallScreen(),
         ],
       ),
       floatingActionButton: _bottomButtons(),
@@ -140,7 +140,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
         shape: StadiumBorder(),
         onPressed: null,
         backgroundColor: Theme.of(context).accentColor,
-        child: new Icon(
+        child:  Icon(
           Icons.message,
           color: Colors.white,
         ),
@@ -150,7 +150,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
         shape: StadiumBorder(),
         onPressed: null,
         backgroundColor: Theme.of(context).accentColor,
-        child: new Icon(
+        child:  Icon(
           Icons.camera,
           color: Colors.white,
         ),
@@ -160,7 +160,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
         shape: StadiumBorder(),
         onPressed: null,
         backgroundColor: Theme.of(context).accentColor,
-        child: new Icon(
+        child:  Icon(
           Icons.add_call,
           color: Colors.white,
         ),

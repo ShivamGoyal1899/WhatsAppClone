@@ -8,7 +8,7 @@ class CameraScreen extends StatefulWidget {
 
   @override
   CameraScreenState createState() {
-    return new CameraScreenState();
+    return  CameraScreenState();
   }
 }
 
@@ -18,7 +18,7 @@ class CameraScreenState extends State<CameraScreen> {
   @override
   void initState() {
     super.initState();
-    controller = new CameraController(widget.cameras[1], ResolutionPreset.high);
+    controller =  CameraController(widget.cameras[1], ResolutionPreset.high);
     controller.initialize().then((_) {
       if (!mounted) {
         return;
@@ -36,11 +36,11 @@ class CameraScreenState extends State<CameraScreen> {
   @override
   Widget build(BuildContext context) {
     if (!controller.value.isInitialized) {
-      return new Container();
+      return  Container();
     }
-    return new AspectRatio(
+    return  AspectRatio(
       aspectRatio: controller.value.aspectRatio,
-      child: new CameraPreview(controller),
+      child:  CameraPreview(controller),
     );
   }
 }

@@ -13,33 +13,33 @@ class MessageScreen extends StatefulWidget {
 class _MessageScreenState extends State<MessageScreen> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return  Scaffold(
       resizeToAvoidBottomPadding: true,
-      appBar: new AppBar(
+      appBar:  AppBar(
         titleSpacing: 0.0,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            new CircleAvatar(
+             CircleAvatar(
               foregroundColor: Theme.of(context).primaryColor,
               backgroundColor: Colors.grey,
-              backgroundImage: new AssetImage(dummyData[3].avatarUrl),
+              backgroundImage:  AssetImage(dummyData[3].avatarUrl),
               radius: 18.0,
             ),
-            new Column(
+             Column(
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.only(top: 10.0, left: 8.0),
-                  child: new Text(
+                  padding:  EdgeInsets.only(top: 10.0, left: 8.0),
+                  child:  Text(
                     dummyData[3].name,
-                    style: new TextStyle(fontSize: 20.0),
+                    style:  TextStyle(fontSize: 20.0),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 3.0, right: 50.0),
-                  child: new Text(
+                  padding:  EdgeInsets.only(top: 3.0, right: 50.0),
+                  child:  Text(
                     "online",
-                    style: new TextStyle(
+                    style:  TextStyle(
                         fontSize: 15.0, fontWeight: FontWeight.w400),
                   ),
                 ),
@@ -48,51 +48,51 @@ class _MessageScreenState extends State<MessageScreen> {
           ],
         ),
         actions: <Widget>[
-          new IconButton(
-            icon: new Icon(
+           IconButton(
+            icon:  Icon(
               Icons.videocam,
               color: Colors.white,
             ),
             tooltip: "Video call",
             onPressed: () {},
           ),
-          new IconButton(
-            icon: new Icon(
+           IconButton(
+            icon:  Icon(
               Icons.call,
               color: Colors.white,
             ),
             tooltip: "Voice call",
             onPressed: () {},
           ),
-          new PopupMenuButton<MoreMenu>(
-            padding: const EdgeInsets.all(0.0),
+           PopupMenuButton<MoreMenu>(
+            padding:  EdgeInsets.all(0.0),
             tooltip: "More options",
             itemBuilder: (BuildContext context) => <PopupMenuEntry<MoreMenu>>[
-                  const PopupMenuItem<MoreMenu>(
+                   PopupMenuItem<MoreMenu>(
                     value: MoreMenu.view_contact,
                     child: Text('View contact'),
                   ),
-                  const PopupMenuItem<MoreMenu>(
+                   PopupMenuItem<MoreMenu>(
                     value: MoreMenu.media,
                     child: Text('Media'),
                   ),
-                  const PopupMenuItem<MoreMenu>(
+                   PopupMenuItem<MoreMenu>(
                     value: MoreMenu.search,
                     child: Text('Search'),
                   ),
-                  const PopupMenuItem<MoreMenu>(
+                   PopupMenuItem<MoreMenu>(
                     value: MoreMenu.mute,
                     child: Text('Mute notifications'),
                   ),
-                  const PopupMenuItem<MoreMenu>(
+                   PopupMenuItem<MoreMenu>(
                     value: MoreMenu.wallpaper,
                     child: Text('Wallpaper'),
                   ),
-                  const PopupMenuItem<MoreMenu>(
+                   PopupMenuItem<MoreMenu>(
                     value: MoreMenu.more,
                     child: ListTile(
                       title: Text("More"),
-                      contentPadding: const EdgeInsets.all(0.0),
+                      contentPadding:  EdgeInsets.all(0.0),
                       trailing: Icon(Icons.arrow_right),
                     ),
                   ),
@@ -111,34 +111,34 @@ class _MessageScreenState extends State<MessageScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            new Padding(
-              padding: const EdgeInsets.only(
+             Padding(
+              padding:  EdgeInsets.only(
                 top: 8.0,
                 left: 8.0,
                 right: 8.0,
               ),
-              child: new Row(
+              child:  Row(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  new Flexible(
+                   Flexible(
                     flex: 1,
-                    child: new Container(
-                      constraints: BoxConstraints(
+                    child:  Container(
+                      raints: Boxraints(
                         maxWidth: MediaQuery.of(context).size.width * 0.8,
                       ),
                       padding: EdgeInsets.all(8.0),
                       decoration: BoxDecoration(
                         borderRadius:
-                            BorderRadius.all(const Radius.circular(5.0)),
+                            BorderRadius.all( Radius.circular(5.0)),
                         color: Colors.white,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          new Text(
+                           Text(
                             "Hi,\nLast chance to RSVP for the Treasure Hunt... Don't hesitate, come play!",
                             textAlign: TextAlign.left,
                           ),
@@ -149,34 +149,34 @@ class _MessageScreenState extends State<MessageScreen> {
                 ],
               ),
             ),
-            new Padding(
-              padding: const EdgeInsets.only(
+             Padding(
+              padding:  EdgeInsets.only(
                 right: 8.0,
                 top: 8.0,
                 left: 8.0,
               ),
-              child: new Row(
+              child:  Row(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  new Flexible(
+                   Flexible(
                     flex: 1,
-                    child: new Container(
-                      constraints: BoxConstraints(
+                    child:  Container(
+                      raints: Boxraints(
                         maxWidth: MediaQuery.of(context).size.width * 0.8,
                       ),
                       padding: EdgeInsets.all(8.0),
                       decoration: BoxDecoration(
                         borderRadius:
-                            BorderRadius.all(const Radius.circular(5.0)),
+                            BorderRadius.all( Radius.circular(5.0)),
                         color: Colors.lightGreenAccent[100],
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          new Text(
+                           Text(
                             "We have a few employees seeking opportunities. They are currently working at MOP in sales support and marketing team.",
                             textAlign: TextAlign.left,
                           ),
@@ -187,34 +187,34 @@ class _MessageScreenState extends State<MessageScreen> {
                 ],
               ),
             ),
-            new Padding(
-              padding: const EdgeInsets.only(
+             Padding(
+              padding:  EdgeInsets.only(
                 top: 8.0,
                 left: 8.0,
                 right: 8.0,
               ),
-              child: new Row(
+              child:  Row(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  new Flexible(
+                   Flexible(
                     flex: 1,
-                    child: new Container(
-                      constraints: BoxConstraints(
+                    child:  Container(
+                      raints: Boxraints(
                         maxWidth: MediaQuery.of(context).size.width * 0.8,
                       ),
                       padding: EdgeInsets.all(8.0),
                       decoration: BoxDecoration(
                         borderRadius:
-                            BorderRadius.all(const Radius.circular(5.0)),
+                            BorderRadius.all( Radius.circular(5.0)),
                         color: Colors.white,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          new Text(
+                           Text(
                             "What roles they are seeking?",
                             textAlign: TextAlign.left,
                           ),
@@ -225,34 +225,34 @@ class _MessageScreenState extends State<MessageScreen> {
                 ],
               ),
             ),
-            new Padding(
-              padding: const EdgeInsets.only(
+             Padding(
+              padding:  EdgeInsets.only(
                 right: 8.0,
                 top: 3.0,
                 left: 8.0,
               ),
-              child: new Row(
+              child:  Row(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  new Flexible(
+                   Flexible(
                     flex: 1,
-                    child: new Container(
-                      constraints: BoxConstraints(
+                    child:  Container(
+                      raints: Boxraints(
                         maxWidth: MediaQuery.of(context).size.width * 0.8,
                       ),
                       padding: EdgeInsets.all(8.0),
                       decoration: BoxDecoration(
                         borderRadius:
-                            BorderRadius.all(const Radius.circular(5.0)),
+                            BorderRadius.all( Radius.circular(5.0)),
                         color: Colors.lightGreenAccent[100],
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          new Text(
+                           Text(
                             "Support",
                             textAlign: TextAlign.left,
                           ),
@@ -263,34 +263,34 @@ class _MessageScreenState extends State<MessageScreen> {
                 ],
               ),
             ),
-            new Padding(
-              padding: const EdgeInsets.only(
+             Padding(
+              padding:  EdgeInsets.only(
                 right: 8.0,
                 top: 3.0,
                 left: 8.0,
               ),
-              child: new Row(
+              child:  Row(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  new Flexible(
+                   Flexible(
                     flex: 1,
-                    child: new Container(
-                      constraints: BoxConstraints(
+                    child:  Container(
+                      raints: Boxraints(
                         maxWidth: MediaQuery.of(context).size.width * 0.8,
                       ),
                       padding: EdgeInsets.all(8.0),
                       decoration: BoxDecoration(
                         borderRadius:
-                            BorderRadius.all(const Radius.circular(5.0)),
+                            BorderRadius.all( Radius.circular(5.0)),
                         color: Colors.lightGreenAccent[100],
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          new Text(
+                           Text(
                             "Graphic designer",
                             textAlign: TextAlign.left,
                           ),
@@ -301,34 +301,34 @@ class _MessageScreenState extends State<MessageScreen> {
                 ],
               ),
             ),
-            new Padding(
-              padding: const EdgeInsets.only(
+             Padding(
+              padding:  EdgeInsets.only(
                 top: 8.0,
                 left: 8.0,
                 right: 8.0,
               ),
-              child: new Row(
+              child:  Row(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  new Flexible(
+                   Flexible(
                     flex: 1,
-                    child: new Container(
-                      constraints: BoxConstraints(
+                    child:  Container(
+                      raints: Boxraints(
                         maxWidth: MediaQuery.of(context).size.width * 0.8,
                       ),
                       padding: EdgeInsets.all(8.0),
                       decoration: BoxDecoration(
                         borderRadius:
-                            BorderRadius.all(const Radius.circular(5.0)),
+                            BorderRadius.all( Radius.circular(5.0)),
                         color: Colors.white,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          new Text(
+                           Text(
                             "I will ping you separately. Thanks",
                             textAlign: TextAlign.left,
                           ),
@@ -339,33 +339,33 @@ class _MessageScreenState extends State<MessageScreen> {
                 ],
               ),
             ),
-            new Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: new Row(
+             Padding(
+              padding:  EdgeInsets.all(8.0),
+              child:  Row(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  new Flexible(
+                   Flexible(
                     flex: 1,
-                    child: new Container(
+                    child:  Container(
                       decoration: BoxDecoration(
                         borderRadius:
-                            BorderRadius.all(const Radius.circular(30.0)),
+                            BorderRadius.all( Radius.circular(30.0)),
                         color: Colors.white,
                       ),
-                      child: new Row(
+                      child:  Row(
                         children: <Widget>[
-                          new IconButton(
+                           IconButton(
                             disabledColor: Colors.grey,
                             color: Colors.grey,
                             icon: Icon(Icons.insert_emoticon),
                             onPressed: () {},
                           ),
-                          new Flexible(
+                           Flexible(
                             child: Container(
-                              constraints: BoxConstraints(maxHeight: 100.0),
-                              child: new TextField(
+                              raints: Boxraints(maxHeight: 100.0),
+                              child:  TextField(
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w400,
@@ -375,9 +375,9 @@ class _MessageScreenState extends State<MessageScreen> {
                                 textInputAction: null,
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
-                                  contentPadding: const EdgeInsets.all(0.0),
+                                  contentPadding:  EdgeInsets.all(0.0),
                                   hintText: "Type a message",
-                                  hintStyle: new TextStyle(
+                                  hintStyle:  TextStyle(
                                     color: Colors.grey[400],
                                     fontSize: 18.0,
                                   ),
@@ -391,13 +391,13 @@ class _MessageScreenState extends State<MessageScreen> {
                               ),
                             ),
                           ),
-                          new IconButton(
+                           IconButton(
                             disabledColor: Colors.grey,
                             color: Colors.grey,
                             icon: Icon(Icons.attach_file),
                             onPressed: () {},
                           ),
-//                          new IconButton(
+//                           IconButton(
 //                            disabledColor: Colors.grey,
 //                            color: Colors.grey,
 //                            icon: Icon(Icons.camera),
@@ -409,13 +409,13 @@ class _MessageScreenState extends State<MessageScreen> {
                   ),
                   Container(
                     width: 50.0,
-                    child: new Padding(
-                      padding: const EdgeInsets.only(left: 4.0),
+                    child:  Padding(
+                      padding:  EdgeInsets.only(left: 4.0),
                       child: FloatingActionButton(
                         elevation: 2.0,
                         backgroundColor: Theme.of(context).primaryColor,
                         foregroundColor: Colors.white,
-                        child: new Icon(Icons.send),
+                        child:  Icon(Icons.send),
                         onPressed: () {},
                       ),
                     ),

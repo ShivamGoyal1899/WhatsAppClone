@@ -9,31 +9,31 @@ class StatusScreen extends StatefulWidget {
 class _StatusScreenState extends State<StatusScreen> {
   @override
   Widget build(BuildContext context) {
-    return new ListView.builder(
+    return  ListView.builder(
       itemCount: dummyData.length,
-      itemBuilder: (context, i) => new Column(
+      itemBuilder: (context, i) =>  Column(
             children: <Widget>[
-              new ListTile(
+               ListTile(
                 leading: Stack(
                   children: <Widget>[
-                    new CircleAvatar(
+                     CircleAvatar(
                       foregroundColor: Theme.of(context).primaryColor,
                       backgroundColor: Colors.grey,
-                      backgroundImage: new AssetImage(dummyData[i].avatarUrl),
+                      backgroundImage:  AssetImage(dummyData[i].avatarUrl),
                       radius: 27.0,
                     ),
-                    new Positioned(
+                     Positioned(
                         left: 34.0,
                         top: 34.0,
                         child: Container(
                           width: 20.0,
                           height: 20.0,
-                          child: new FloatingActionButton(
+                          child:  FloatingActionButton(
                             mini: true,
                             shape: StadiumBorder(),
                             onPressed: null,
                             backgroundColor: Theme.of(context).accentColor,
-                            child: new Icon(
+                            child:  Icon(
                               Icons.add,
                               color: Colors.white,
                               size: 18.0,
@@ -42,34 +42,34 @@ class _StatusScreenState extends State<StatusScreen> {
                         )),
                   ],
                 ),
-                title: new Row(
+                title:  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    new Text(
+                     Text(
                       dummyData[i].name,
-                      style: new TextStyle(
+                      style:  TextStyle(
                           fontWeight: FontWeight.w600, fontSize: 17.0),
                     ),
                   ],
                 ),
-                subtitle: new Container(
-                  padding: const EdgeInsets.only(top: 1.0),
-                  child: new Text(
+                subtitle:  Container(
+                  padding:  EdgeInsets.only(top: 1.0),
+                  child:  Text(
                     dummyData[i].time,
                     style:
-                        new TextStyle(color: Colors.grey[600], fontSize: 15.0),
+                         TextStyle(color: Colors.grey[600], fontSize: 15.0),
                   ),
                 ),
               ),
-              new Container(
+               Container(
                 width: MediaQuery.of(context).size.width,
                 height: 30,
                 child: Padding(
                   padding:
-                      const EdgeInsets.only(left: 12.0, top: 8.0, bottom: 8.0),
-                  child: new Text(
+                       EdgeInsets.only(left: 12.0, top: 8.0, bottom: 8.0),
+                  child:  Text(
                     "Viewed updates",
-                    style: new TextStyle(
+                    style:  TextStyle(
                         color: Colors.grey[600],
                         fontSize: 14.0,
                         fontWeight: FontWeight.w600),
@@ -77,30 +77,30 @@ class _StatusScreenState extends State<StatusScreen> {
                 ),
                 color: Colors.grey[200],
               ),
-              new ListTile(
-                leading: new CircleAvatar(
+               ListTile(
+                leading:  CircleAvatar(
                   foregroundColor: Theme.of(context).primaryColor,
                   backgroundColor: Colors.grey,
-                  backgroundImage: new AssetImage(dummyData_1[i].avatarUrl),
+                  backgroundImage:  AssetImage(dummyData_1[i].avatarUrl),
                   radius: 27.0,
                 ),
-                title: new Row(
+                title:  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    new Text(
+                     Text(
                       dummyData_1[i].name,
-                      style: new TextStyle(
+                      style:  TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 17.0,
                       ),
                     ),
                   ],
                 ),
-                subtitle: new Container(
-                  padding: const EdgeInsets.only(top: 1.0),
-                  child: new Text(
+                subtitle:  Container(
+                  padding:  EdgeInsets.only(top: 1.0),
+                  child:  Text(
                     dummyData_1[i].time,
-                    style: new TextStyle(
+                    style:  TextStyle(
                       color: Colors.grey[600],
                       fontSize: 15.0,
                     ),
