@@ -45,7 +45,7 @@ Flutter Developer | Network Security | ML Enthusiast | Sophomore | Blogger
 If you found this project useful, then please consider giving it a :star: on Github and sharing it with your friends via social media.
 
 ## Got any Queries?
-If you got any queries or found a bug create a PR or ping me over on [hi@itsshivam.com](mailto:hi@itsshivam.com)
+If you got any queries or found a bug create a PR or ping me over on [hey@goyalshivam.com](mailto:hey@goyalshivam.com)
 
 ## Found me generous?
 
